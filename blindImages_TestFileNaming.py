@@ -9,7 +9,6 @@ import random, shutil, os, pprint, shelve
 
 def blindImages(filePath): #HARDCODED_VARIABLE... make this an option in a GUI
     try:
-        randomList=[]
         i=0
         fileCount=0
         for filename in os.listdir(filePath):
@@ -17,14 +16,7 @@ def blindImages(filePath): #HARDCODED_VARIABLE... make this an option in a GUI
                 fileCount+=1
             else:
                 continue
-        while i <fileCount:
-            x=random.randint(0,999)
-            if x in randomList:
-                continue
-            else:
-                randomList.append(x)
-                i+=1
-                continue
+        randomList=random.sample(range(100,999),fileCount)
         blindKey={}
         i=0
         newFile='keyFileFor_'+str(os.path.basename(filePath))
