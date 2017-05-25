@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
-#blindFiles.py--- the functions blindImages and unblind take a file path as an argument. blindImages counts the tif
+"""blindFiles.py--- the functions blindImages and unblind take a file path as an argument. blindImages counts the tif
 #files and determines how many random numbers you need to blind the files.
 #then it renames and copies the files to a new directory.
 #unblind reverses this option. For safety, blindFiles and unBlind copy the files before renaming them so the originals are unaffected. 
-'''by Nick George on August 3, 2016'''
+by Nick George on August 3, 2016"""
 
 import random, shutil, os, pprint, shelve
 
@@ -85,7 +85,7 @@ def runProgram():
         elif mode.lower()=='':
             break
         else:
-            print('you should follow instructions')
+            print('please follow instructions')
             continue
             
             
